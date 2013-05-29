@@ -1,0 +1,70 @@
+.float_left {
+    float: left;
+}
+.float_right {
+    float: right;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    background: #ddd;
+}
+
+#main {
+    width: 720px;
+    margin: 0px auto;
+    font-size: 11pt;
+    box-shadow: 0px 0px 12px #aaa;
+    border: 1px solid #aaa;
+    border-top: none;
+    background-color: #fff;
+}
+
+/* Section stuff */
+.section {
+    max-width: 100%;
+    clear: both;
+    padding: 5px 18px 5px 18px;
+}
+/*
+.section:not(:first-of-type) {
+    border-top: 1px solid #aaa;
+    background: linear-gradient(to top, #f0f0f0 0%,#ffffff 25%);
+}
+*/
+.section:nth-of-type(2n) {
+    /* background-color: #f0f0f0; */
+}
+.section .header {
+    font-weight: 400;
+    font-size: 18pt;
+    text-align: center;
+    padding-bottom: 5px;
+    font-family: 'Oswald', sans-serif;
+    border-bottom: 1px solid #666;
+    background: linear-gradient(to top, #f6f6f6 0%,#ffffff 45%);
+}
+.section .subheader {
+    font-size: 14pt;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+#header > #name {
+    font-size: 40pt;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+#header > #date {
+}
+
+
+.section > .section_name {
+
+}
+
+/* Overriding default user-agent styles */
+body {
+    margin: 0px;
+}
