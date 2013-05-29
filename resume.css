@@ -1,30 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,800,300);
+@import url(http://fonts.googleapis.com/css?family=Oswald:300,400);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:300,400,700);
+
+
 .float_left {
     float: left;
 }
 .float_right {
     float: right;
 }
+.clear {
+    clear: both;
+}
 
 body {
     font-family: 'PT Sans', sans-serif;
     background: #ddd;
 }
+* { padding: 0; margin: 0; }
 
-#main {
-    width: 720px;
-    margin: 0px auto;
+#might_as_well_be_body {
+    width: 680px;
+    margin: 0 auto;
     font-size: 11pt;
     box-shadow: 0px 0px 12px #aaa;
     border: 1px solid #aaa;
     border-top: none;
     background-color: #fff;
+    margin-top: 10px; /* perhaps a bit too playful */
+    padding: 50px 20px 50px 20px;
 }
 
 /* Section stuff */
 .section {
     max-width: 100%;
     clear: both;
-    padding: 5px 18px 5px 18px;
+    padding: 5px 0px 5px 0px;
+}
+.section:first-of-type {
+    padding-top: 0;
 }
 /*
 .section:not(:first-of-type) {
@@ -32,31 +46,35 @@ body {
     background: linear-gradient(to top, #f0f0f0 0%,#ffffff 25%);
 }
 */
-.section:nth-of-type(2n) {
-    /* background-color: #f0f0f0; */
-}
 .section .header {
-    font-weight: 400;
-    font-size: 18pt;
-    text-align: center;
-    padding-bottom: 5px;
-    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 16pt;
+    font-family: 'PT Sans', sans-serif;
+    /* text-align: center; */
+    padding-bottom: 2px;
+    margin-bottom: 5px;
     border-bottom: 1px solid #666;
-    background: linear-gradient(to top, #f6f6f6 0%,#ffffff 45%);
 }
 .section .subheader {
     font-size: 14pt;
     font-weight: 400;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'PT Sans', sans-serif;
 }
 
 
-#header > #name {
-    font-size: 40pt;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
+#name {
+    line-height: 20pt;
+    letter-spacing: 1pt;
+    font-size: 20pt;
+
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
 }
-#header > #date {
+
+#date {
+    text-align: right;
 }
 
 
@@ -67,4 +85,26 @@ body {
 /* Overriding default user-agent styles */
 body {
     margin: 0px;
+}
+
+#sidebar {
+    width: 20%;
+    margin: 0 25px 0 25px;
+}
+/* if your browser doesn't support calc() i probably
+   dont wan't to work for you */
+#main {
+    width: calc(80% - 50px);
+}
+
+#sidebar {
+    text-align: center;
+}
+
+#sidebar #title {
+    font-style: italic;
+    color: #444;
+}
+#sidebar > * {
+    margin-bottom: 10px;
 }
