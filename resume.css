@@ -88,17 +88,20 @@ body {
 }
 
 #sidebar {
-    width: 20%;
+    width: 22%;
     margin: 0 25px 0 25px;
 }
 /* if your browser doesn't support calc() i probably
    dont wan't to work for you */
 #main {
-    width: calc(80% - 50px);
+    width: calc(78% - 50px);
 }
 
 #sidebar {
     text-align: center;
+}
+#objective {
+    font-size: 10pt;
 }
 
 #sidebar #title {
