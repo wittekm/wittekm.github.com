@@ -79,7 +79,11 @@ body {
     color: #444;
 }
 
-.experience_entry .prose {
+.entry > * {
+    margin-bottom: 5px;
+}
+
+.prose {
     font-size: 10pt;
 }
 
@@ -105,7 +109,8 @@ body {
 /* if your browser doesn't support calc() i probably
    dont wan't to work for you */
 #main {
-    width: calc(78% - 50px);
+    width: calc(78% - 75px);
+    margin-right: 25px;
 }
 
 /* Things in sidebar */
