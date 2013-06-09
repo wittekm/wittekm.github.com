@@ -13,7 +13,7 @@ jQuery.noConflict()(function($) {
         phone: ["%/-.&\x1D33-*1356", 3],  // rot by +3
     };
 
-    // Thanks, StackOverflow.
+    // Thanks stackoverflow
     var rot = function(str, offset) {
         return str.replace(/./g, function(c) { 
             return String.fromCharCode(c.charCodeAt(0) + offset);
@@ -27,7 +27,9 @@ jQuery.noConflict()(function($) {
     };
 
     $("#contact_info :not(.header)").html(
-        [decryptVariable("email"), decryptVariable("phone")].join("<br />")
+        // actually I really don't want anybody contacting me by phone before they email me now that I think about it
+        // [decryptVariable("email"), decryptVariable("phone")].join("<br />")
+        decryptVariable("email")
     );
 
 });

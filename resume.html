@@ -4,23 +4,48 @@
     <title>Maxim Wittek::resume</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="resume.css">
+    <meta name="viewport" content="width=device-width">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="resume.js" type="text/javascript"></script>
 </head>
 <body><div id="might_as_well_be_body">
 
     <div id="sidebar" class="float_left">
-            <div id="name">Maxim Wittek</div>
-            <div id="title">Software Developer.</div>
-            <div class="section" id="contact_info">
-                <div class="header">Contact Info</div>
-                <div>
-                    <!-- Loaded in via JS so robots can't get it. -->
-                </div>
+        <!-- Unfortunately, I have to wrap the name div in another div -->
+        <div id="name">
+            <div id="circle">Maxim Wittek</div>
+        </div>
+        <div id="title">Software Developer.</div>
+
+        <div class="section" id="contact_info">
+            <div class="header">Contact Info</div>
+            <div>
+                <!-- Loaded in via JS so robots can't get it. -->
             </div>
+        </div>
+
+        <div class="section" id="online">
+            <div class="header">Online</div>
+            <ul>
+                <li><a href="https://github.com/wittekm">github.com/wittekm</a></li>
+                <li><a href="http://umich.edu/~wittekm">umich.edu/~wittekm</a></li>
+                <li><a href="http://www.linkedin.com/profile/view?id=150319434">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        <div class="section" id="skills">
+            <div class="header">Skills</div>
+            <ul>
+                <li>Java</li>
+                <li>Ruby (+ Rails)</li>
+                <li>Web development</li>
+                <li>C++11</li>
+                <li>Obj-C + iOS</li>
+            </ul>
+        </div>
     </div>
 
-    <div id="main" class="float_left">
+    <div id="main" class="float_right">
         <div class="section">
             <div class="header">Objective</div>
             I am looking for a full-time position in the software development field, 
@@ -34,7 +59,7 @@
                 <span class="subheader">Amazon.com</span> (2012+)
                 <div class="dramatic">Software Development Engineer</div>
                 <div class="prose">
-                    Member of the Kindle/Digital organization's Kindle Content Inspection & Automation team, which develops technology to ensure that only quality books are made available on the Kindle Store, and that publishers have the necessary rights to the content. Ruby on Rails application development,
+                    Member of the Kindle Content Inspection & Automation team, developing technology to ensure that only quality books are made available on the Kindle Store, and that publishers have the rights to the content. Required skills include Java service development, Ruby on Rails development, distributed computing (Amazon SWF), SQL, NoSQL (DynamoDB), and data aggregation.
                 </div>
             </div>
 
@@ -42,9 +67,8 @@
                 <span class="subheader">Amazon.com</span> (2011)
                 <div class="dramatic">SDE Summer Intern</div>
                 <div class="prose">
-                    Worked on the Kindle/Digital organization's Subscriptions team, which is responsible for many of the
-                    subscriptions in the Amazon.com ecosystem, like Prime or Kindle newspaper subscriptions. Created a brand 
-                    new, internal Amazon Web Service for redundant, cloud-based scheduling of events. Took charge of 
+                    Worked on the Kindle/Digital Subscriptions team, responsible for Amazon.com subscriptions like Prime or Kindle newspapers.
+                    Created a brand new Amazon Web Service for redundant, cloud-based scheduling of events. Took charge of 
                     development of the Subscriptions team's internal tool, written in Ruby on Rails.
                 </div>
             </div>
@@ -61,7 +85,7 @@
                 <span class="subheader">BlackRock Solutions</span> (2008)
                 <div class="dramatic">SDE Summer Intern</div>
                 <div class="prose">
-                    At Blackrock I was on the Investment Products Group, working on BlackRock's flagship product, Aladdin. Gained experience in the bug-testing process, using BugZilla, and writing test cases. Learned to use SQL with OracleDB, and how to interface with databases through Perl. 
+                    Member of the Investment Products Group, working on BlackRock's flagship product, Aladdin. Gained experience in the bug-testing process, using BugZilla, and writing test cases. Learned to use SQL with OracleDB, and how to interface with databases through Perl. 
                 </div>
             </div>
         </div>
@@ -71,7 +95,7 @@
 
             <div class="entry">
                 <span class="subheader">University of Michigan</span> (2008 to 2012)
-                <div class="dramatic">Bachelors of Engineering, Computer Science</div>
+                <div class="dramatic">Bachelors of Science in Engineering, Computer Science. 3.<span style="text-decoration:overline;">333</span> GPA</div>
                 <div class="prose">
                     Relevant classes included
                     UI Development, 
@@ -87,7 +111,7 @@
 
     </div>
     <div class="clear"></div>
-    <div id="date">May 2013</div>
+    <div id="date">June 2013</div>
 
 </div></body>
 </html>

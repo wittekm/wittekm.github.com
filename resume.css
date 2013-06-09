@@ -1,8 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,800,300);
 @import url(http://fonts.googleapis.com/css?family=Oswald:300,400);
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700);
 
+/* 
+ * Okay, seriously, why are you looking at my CSS file?
+ * It's a mess!
+ * This is embarassing. Look at all these fonts I import and then 
+ * don't even bother using.
+ */
 
 .float_left {
     float: left;
@@ -25,17 +31,54 @@ body {
     margin: 0;
 }
 
+a {
+    color: rgb(0, 136, 204);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 @media screen {
     #might_as_well_be_body {
-    width: 720px;
-    margin: 0 auto;
-    box-shadow: 0px 0px 12px #aaa;
-    border: 1px solid #aaa;
-    border-top: none;
-    background-color: #fff;
-    margin-top: 10px; /* perhaps a bit too playful */
-    padding: 50px 20px 50px 20px;
+        width: 720px;
+        margin: 0 auto;
+        box-shadow: 0px 0px 12px #aaa;
+        border: 1px solid #aaa;
+        background-color: #fff;
+        margin-top: 10px; /* perhaps a bit too playful */
+        padding: 50px 20px 50px 20px;
+    }
 }
+
+/* it looks meh on iphone */
+@media only screen and (max-device-width: 480px) {
+    body {
+        max-width: 100%;
+    }
+    #might_as_well_be_body {
+        width: 460px;
+    }
+    #sidebar {
+       width: 100%;
+       margin: 0;
+       -moz-column-count:3;
+       -webkit-column-count:3;
+       column-count:3;
+   } 
+}
+
+#sidebar {
+    width: 25%;
+    margin: 0 25px 0 25px;
+    text-align: center;
+}
+
+/* if your browser doesn't support calc() I probably dont wan't to work for you */
+#main {
+    width: calc(75% - 75px);
+    margin-right: 25px;
 }
 
 /* Section stuff */
@@ -65,17 +108,6 @@ body {
     font-size: 16pt;
 }
 
-
-#name {
-    line-height: 20pt;
-    letter-spacing: 1pt;
-    font-size: 20pt;
-
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-}
-
 .dramatic {
     font-style: italic;
     color: #444;
@@ -84,35 +116,42 @@ body {
 .entry > * {
     margin-bottom: 5px;
 }
+.entry {
+    margin-bottom: 7px;
+}
 
 .prose {
     font-size: 10pt;
 }
 
+#name {
+    line-height: 20pt;
+    letter-spacing: 1pt;
+    font-size: 22pt;
+
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    width: 125px;
+    margin: 0 auto;
+}
+
+/* name circle */
+#name > #circle {
+    width: 125px;
+    height: 125px;
+    background-color: #ddd;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0 auto;
+
+    text-shadow: 1px 1px 0px #fff;
+}
+
+
 #date {
     text-align: right;
-}
-
-
-.section > .section_name {
-
-}
-
-/* Overriding default user-agent styles */
-body {
-    margin: 0px;
-}
-
-#sidebar {
-    width: 22%;
-    margin: 0 25px 0 25px;
-    text-align: center;
-}
-/* if your browser doesn't support calc() i probably
-   dont wan't to work for you */
-#main {
-    width: calc(78% - 75px);
-    margin-right: 25px;
 }
 
 /* Things in sidebar */
@@ -130,14 +169,7 @@ body {
     text-transform: uppercase;
 }
 
-.bubbly {
-    /* orange: #FF9900; blue: #146EB4 */
-    /*background: linear-gradient(to bottom, #ff9900 0%,#ffffff 90%);*/
-    padding: 0 3px 1px 3px;
-    border-radius:3px;
-    margin-top: 5px;
+#sidebar ul {
+    list-style-type: none;
 }
-.amazon {
-    background-color: #aaa;
-    color: #fff;
-}
+
