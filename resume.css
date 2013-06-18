@@ -22,7 +22,7 @@
 
 body {
     font-family: 'PT Sans', sans-serif;
-    background: #ddd;
+    background-color: #fff;
     font-size: 11pt;
 }
 
@@ -104,20 +104,17 @@ a:hover {
     text-align: center;
     text-transform: uppercase;
 
-    width: 125px;
     margin: 0 auto;
+    width: 125px;
 }
 
-/* name circle */
+/* used to be a circle, now it's a square. great story imo*/
 #name > #circle {
-    width: 125px;
     height: 125px;
-    background-color: #ddd;
     display: table-cell;
     vertical-align: middle;
-    margin: 0 auto;
-
     text-shadow: 1px 1px 0px #fff;
+    background-color: #ddd !important; /* otherwise, certain browsers won't render the background color */
 }
 
 
@@ -145,6 +142,10 @@ a:hover {
 }
 
 @media screen {
+    body {
+        background-color: #ddd;
+    }
+
     #might_as_well_be_body {
         width: 720px;
         margin: 0 auto;
