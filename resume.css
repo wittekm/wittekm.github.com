@@ -109,12 +109,13 @@ a:hover {
 }
 
 /* used to be a circle, now it's a square. great story imo*/
-#name > #circle {
+#name > #shape {
     height: 125px;
     display: table-cell;
     vertical-align: middle;
     text-shadow: 1px 1px 0px #fff;
     background-color: #ddd !important; /* otherwise, certain browsers won't render the background color */
+    -webkit-print-color-adjust: exact; /* force webkit to print color */
 }
 
 
