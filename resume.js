@@ -6,8 +6,7 @@ This is all assuming that web crawlers don't have a javascript engine.
 Don't take this to be exemplary of my coding skill, this is seriously just 
 something hacked together so I could have a resume on Github and not be spammed.
 */
-
-jQuery.noConflict()(function($) {
+function initialize() {
     var encryptedValues = {
         email: ["nbyxjuufl,sftvnfAhnbjm/dpn", -1], // rot by -1
         phone: ["%/-.&\x1D33-*1356", 3],  // rot by +3
@@ -27,11 +26,11 @@ jQuery.noConflict()(function($) {
     };
 
     const email = decryptVariable("email");
+    const emailLink = `<a href="mailto:${email}">${email}</a>`;
+    const domNode = document.querySelectorAll("#contact-info #value-comes-from-js")[0];
 
-    $("#contact-info #value-comes-from-js").html(
-        // actually I really don't want anybody contacting me by phone before they email me now that I think about it
-        // [decryptVariable("email"), decryptVariable("phone")].join("<br />")
-        `<a href="mailto:${email}">${email}</a>`
-        );
+    domNode.innerHTML = emailLink;
 
-});
+}
+
+window.addEventListener('load', initialize);
