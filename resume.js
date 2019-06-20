@@ -9,7 +9,7 @@ something hacked together so I could have a resume on Github and not be spammed.
 
 jQuery.noConflict()(function($) {
     var encryptedValues = {
-        email: ["nbyxjuuflAhnbjm/dpn", -1], // rot by -1
+        email: ["nbyxjuufl,sftvnfAhnbjm/dpn", -1], // rot by -1
         phone: ["%/-.&\x1D33-*1356", 3],  // rot by +3
     };
 
@@ -26,10 +26,12 @@ jQuery.noConflict()(function($) {
         return rot(hashEntry[0], hashEntry[1]);
     };
 
+    const email = decryptVariable("email");
+
     $("#contact-info #value-comes-from-js").html(
         // actually I really don't want anybody contacting me by phone before they email me now that I think about it
         // [decryptVariable("email"), decryptVariable("phone")].join("<br />")
-        decryptVariable("email")
-    );
+        `<a href="mailto:${email}">${email}</a>`
+        );
 
 });
