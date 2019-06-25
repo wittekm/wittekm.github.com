@@ -26,6 +26,10 @@ body {
     font-size: 11pt;
 }
 
+.smaller-font {
+    font-size: 10pt;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -47,7 +51,6 @@ a:hover {
 }
 
 #main {
-    width: 460px; /* if your browser doesn't support calc() I probably dont wan't to work for you */
     width: calc(75% - 75px);
     margin-right: 25px;
 }
