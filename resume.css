@@ -72,14 +72,14 @@ a:hover {
 */
 #main .section > .header {
     font-weight: bold;
-    font-size: 18pt;
+    font-size: 16pt;
     /* text-align: center; */
     padding-bottom: 2px;
     margin-bottom: 5px;
     border-bottom: 1px solid #666;
 }
 #main .section .subheader {
-    font-size: 16pt;
+    font-size: 14pt;
 }
 
 .dramatic {
@@ -110,6 +110,8 @@ a:hover {
 
     margin: 0 auto;
     width: 125px;
+
+    color-adjust: exact; /* force to print color */
 }
 
 /* used to be a circle, now it's a square. great story imo*/
@@ -119,7 +121,7 @@ a:hover {
     vertical-align: middle;
     text-shadow: 1px 1px 0px #fff;
     background-color: #ddd !important; /* otherwise, certain browsers won't render the background color */
-    -webkit-print-color-adjust: exact; /* force webkit to print color */
+    color-adjust: exact; /* force to print color */
 }
 
 
@@ -162,15 +164,22 @@ a:hover {
     }
 }
 
+span.too-specific-dates {
+    /* who gives a shit about specific dates? makes it look ugly */
+    display: none;
+}
+
 /* it looks meh on iphone */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 375px) {
+    --mobile-max-width: 375px;
+
     body {
         max-width: 100%;
     }
     #might_as_well_be_body {
         padding: 5px;
         margin: 0;
-        width: 470px;
+        width: calc(var(--mobile-max-width) - 10);
     }
     #sidebar {
        width: 100%;
@@ -180,7 +189,7 @@ a:hover {
        column-count:3;
    } 
    #main {
-       width: 460px;
+       width:calc(var(--mobile-max-width) - 20);
        margin: 0 auto;
        margin-top: 20px;
    }
