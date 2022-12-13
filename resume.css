@@ -195,3 +195,10 @@ span.too-specific-dates {
    }
 }
 
+img.company-logo {
+    height: 12pt;
+    width: 12pt;
+    vertical-align: middle;
+    /* filter: grayscale(100%); /* i sort of like this? */
+    padding-right: 2pt;
+}
