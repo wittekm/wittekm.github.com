@@ -87,6 +87,13 @@ a:hover {
     color: #444;
 }
 
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 .entry > * {
     margin-bottom: 5px;
 }
