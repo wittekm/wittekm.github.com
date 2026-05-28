@@ -3,10 +3,10 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700);
 
-/* 
+/*
  * Okay, seriously, why are you looking at my CSS file?
  * It's a mess!
- * This is embarassing. Look at all these fonts I import and then 
+ * This is embarassing. Look at all these fonts I import and then
  * don't even bother using.
  */
 
@@ -21,7 +21,7 @@
 }
 
 body {
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", sans-serif;
     background-color: #fff;
     font-size: 11pt;
 }
@@ -87,6 +87,13 @@ a:hover {
     color: #444;
 }
 
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 .entry > * {
     margin-bottom: 5px;
 }
@@ -123,7 +130,6 @@ a:hover {
     background-color: #ddd !important; /* otherwise, certain browsers won't render the background color */
     color-adjust: exact; /* force to print color */
 }
-
 
 #date {
     text-align: right;
@@ -182,17 +188,17 @@ span.too-specific-dates {
         width: calc(var(--mobile-max-width) - 10);
     }
     #sidebar {
-       width: 100%;
-       margin: 0;
-       -moz-column-count:3;
-       -webkit-column-count:3;
-       column-count:3;
-   } 
-   #main {
-       width:calc(var(--mobile-max-width) - 20);
-       margin: 0 auto;
-       margin-top: 20px;
-   }
+        width: 100%;
+        margin: 0;
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+    #main {
+        width: calc(var(--mobile-max-width) - 20);
+        margin: 0 auto;
+        margin-top: 20px;
+    }
 }
 
 img.company-logo {
